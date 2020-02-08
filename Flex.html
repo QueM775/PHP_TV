@@ -12,11 +12,9 @@
    }
 
 .box div {
-  margin:auto;
   align-content: space-between;
   justify-content: space-evenly;
-  border-radius: 5px;
-  border: solid rgb(45, 185, 178) 3px;
+
   }
   .Bottom{
     display: flex;
@@ -30,11 +28,14 @@
   .player{
     width: 98%;
     height: 50%;
+    margin-left: 1%;
     background-color: rgb(219, 110, 196);    
   }
    .Title{
     width: 98%;
     height: 20%;
+    margin-top: 3%;
+    margin-left: 1%;
     background-color: rgb(219, 110, 196);
    
    }
@@ -42,30 +43,99 @@
     width: 30%;
     height: 100%; 
     background-color: rgb(214, 221, 113);
+    display: flex;
+  }
+  .topfldrList{
+    background-color: cornsilk;
+    width:55%;
+    height:85%;
+    display: inline-flex; 
+    margin-top: 3%;
   }
   .bLeft{
     width: 30%;
-    height: 585px;
+    height: 100%;
     margin-bottom: 0;
+    align-items: flex-end;
     border: solid rgb(201, 57, 112) 3px;
     background-color: cadetblue;
+  }
+  .btmfldrlist{
+    background-color: cornsilk;
+    width:95%;
+    height:95%;
+    display: inline-flex; 
+    margin-left: 2%;
   }
   .tRight{
     width: 20%;
     height: 100%; 
     background-color: rgb(214, 221, 113);
   }
-  .Icons{
-    width: 70%;
-    height: 70%;
-    background-color: rgb(219, 110, 196);
-  }
   .bRight{
     width: 70%;
-    height: 585px;
+    height: 100%;
     border: solid rgb(201, 190, 38) 3px;
     background-color: cadetblue;
   }
+  .Icons{
+    width: 75%;
+    height: 75%;
+    margin-left: 12%;
+    margin-top: 5%;
+    background-color: rgb(219, 110, 196);
+  }
+
+  
+
+  /* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 3%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  Left:0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:rgb(214, 221, 113)}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
   
     </style>
     
@@ -77,8 +147,22 @@
 
   <body>
     <div class="box">
-        <div class="tLeft">Here you go 1</div>
-        
+        <div class="tLeft">
+           <div class="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+                 <a href="#">Audio Books</a>
+                 <a href="#">Links</a>
+                 <a href="#">Movies</a>
+                 <a href="#">Music</a>
+                 <a href="#">PDF Files</a>
+                 <a href="#">Pictures</a>
+              </div>
+            </div> 
+            <div class="topfldrList">
+              This is where the open folders will be
+            </div>
+        </div>
         <div class="center">
             Here you go 2
             <div class="player">
@@ -92,7 +176,12 @@
         </div>
     </div>
     <div class="Bottom">
-        <div class="bLeft">Bottom Left</div>
+        <div class="bLeft">
+          Bottom Left
+            <div class="btmfldrlist">
+                Bottom folder list
+            </div>
+        </div>
         <div class="bRight">Bottom Right</div>
     </div>
   </body>
