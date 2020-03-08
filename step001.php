@@ -9,7 +9,7 @@ LW (__FILE__, __LINE__, "Hello world");
 $sHomeHtmlFolder = getcwd(); # this statement makes this PHP file 'movable'
                              # PHP code will always start looking for subfolders from current folder
                              # where "current folder" is where this PHP file is located
-$sAcriveDirectory = $sHomeHtmlFolder . "";
+$sAcriveDirectory = $sHomeHtmlFolder;
 LW (__FILE__, __LINE__, "sAcriveDirectory=" . $sAcriveDirectory);
 
 
