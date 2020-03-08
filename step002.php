@@ -82,11 +82,15 @@ function fnGetFilesOnly($sStartFolder){
 }
 
 function fnFldrName2Link($sFolderName){
+  $sResult = "<a href=step002.php?fldr=@href>@Text</a>";
   $sFolderName = fnFldrNameChk($sFolderName);
-  $sReturn = "<a href=step002.php?fldr=@href>@Text</a>";
-  $sReturn = str_replace("@href", $sFolderName, $sReturn);
-  $sReturn = str_replace("@Text", $sFolderName, $sReturn);
-  return $sReturn;
+  
+  $arrTemp = explode("/", $sFolderName);
+  $sTailFolderName = $arrTemp[count($arrTemp) - 2];
+
+  $sResult = str_replace("@href", $sFolderName, $sResult);
+  $sResult = str_replace("@Text", $sTailFolderName, $sResult);
+  return $sResult;
 }
 
 function fnFldrNameChk($sInputFolderName){
