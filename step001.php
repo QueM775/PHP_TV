@@ -51,12 +51,12 @@ echo("Done-############################</br>");
 
 function fnGetFoldersOnly($sStartFolder){
   # source https://www.sitepoint.com/community/t/how-to-list-folder-names/4548
-  $arr = glob($sStartFolder. "/*", GLOB_ONLYDIR);
+  $arrFldr = glob($sStartFolder. "/*", GLOB_ONLYDIR);
   $sUpPath = getcwd() . "/";
-  for ($iIndx=0; $iIndx < count($arr); $iIndx++){
-    $arr[$iIndx] = str_replace($sUpPath, "", $arr[$iIndx]);
+  for ($iIndx=0; $iIndx < count($arrFldr); $iIndx++){
+    $arrFldr[$iIndx] = str_replace($sUpPath, "", $arrFldr[$iIndx]);
   }
-  return $arr;
+  return $arrFldr;
 }
 
 function fnGetFilesOnly($sStartFolder){
