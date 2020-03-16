@@ -11,7 +11,7 @@
 
   <body>
     
-<!-- The Box Div goes across the trop left to right. -->
+<!-- The Box Div goes across the trop left to right. It is the top container -->
     <div class="box"> 
       <!-- The tLeft Div is the top left Folder Div -->
         <div class="tLeft">
